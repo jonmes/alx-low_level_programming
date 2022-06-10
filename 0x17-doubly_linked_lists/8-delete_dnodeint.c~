@@ -1,0 +1,28 @@
+#include "lists.h"
+
+/**
+ *delete_dnodeint_at_index- Delete the node at given index
+ *@h:first node
+ *@idx:given index
+ *Return: 1 if it succeeded else -1 to failed
+ */
+
+int delete_dnodeint_at_index(dlistint_t **h, unsigned int idx)
+{
+	unsigned int i;
+	dlistint_t current;
+
+	if (*h == NULL)
+		return (-1);
+
+	current = *h;
+
+	while (current && i < idx)
+	{
+		current = current->next;
+		i++;
+	}
+
+	free(current);
+	return (1);
+
