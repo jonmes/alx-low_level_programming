@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char string[15]= "_putchar";
+	char string[20]= "_putchar\n";
 	int i = 0;
 	while(string[i] != '\0'){
 		_putchar(string[i]);
